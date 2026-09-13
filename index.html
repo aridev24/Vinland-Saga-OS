@@ -13,8 +13,10 @@
 
       .topbar {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
-        height: flex;
+        height: auto;
         padding-bottom: 2px;
         background-color: rgb(0, 0, 0, 0.25);
         backdrop-filter: blur(50px);
@@ -24,19 +26,83 @@
 
       .logo {
         margin-left: 20px;
-        color: white;
+        width: fit-content;
         font-family: Impact, sans-serif; 
         text-transform: uppercase; 
-        letter-spacing: 0.5px; 
+        letter-spacing: 0.8px; 
         transform: scaleY(1.3);
         color: rgb(214, 214, 214);
         font-size: 12px;
         font-weight: lighter;
         line-height: 22px;
-        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.671);
-
-
+        background-image: url("https://media.istockphoto.com/id/1391524274/vector/gray-bright-grunge-texture-vector-background.jpg?s=612x612&w=0&k=20&c=dLmXvYOICRWWTEFfgkXuM21I3IddBeOYvGt4-h1Vl1A=");
+        background-size: cover;
+        background-position: center;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
       }
+
+
+      .time_element {     
+        margin-right: 20px;  
+        width: fit-content;
+        font-family: Impact, sans-serif; 
+        text-transform: uppercase; 
+        letter-spacing: 0.8px; 
+        transform: scaleY(1.3);
+        color: rgb(214, 214, 214);
+        font-size: 12px;
+        font-weight: lighter;
+        line-height: 22px;
+        background-image: url("https://media.istockphoto.com/id/1391524274/vector/gray-bright-grunge-texture-vector-background.jpg?s=612x612&w=0&k=20&c=dLmXvYOICRWWTEFfgkXuM21I3IddBeOYvGt4-h1Vl1A=");
+        background-size: cover;
+        background-position: center;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+      }
+
+      .greeting_card {
+        font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;
+        color: rgb(19, 19, 19);
+        background-color: rgba(255, 255, 255, 0.20);        
+        backdrop-filter: blur(50px);
+        border : solid 1px;
+        width : fit-content;
+        padding: 5px;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+      }
+
+      .map {
+        font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;
+        font-size: large;
+        color: aliceblue;
+        color: rgb(10, 10, 10);
+        background-color: rgba(255, 255, 255, 0.20);        
+        backdrop-filter: blur(50px);
+        text-align: center;
+        border: solid 1px;
+        border-radius: 3px;
+        position: absolute;
+        top: 14%;
+        left: 83%;
+        line-height: 0%;
+      }
+
+
+      .map img {
+        width: 200px;
+        height: 160px;
+      }
+
+      
 
     </style>
   </head>
@@ -47,10 +113,35 @@
         <h1>Vinland<br>Saga OS</h1>
 
       </div>
-      <div id="">
-
-      </div>
+      <div class="time_element">
+        <h1 id="timeElement">Time </h1>
+      </div>  
 
     </div>
+
+    <div class="greeting_card">
+      
+        <h1>Good evening, warrior.<br>The sea is calm today.</h1>
+      
+    </div>
+        <div class="map">
+          <h3>
+            Journey Map
+          </h3>
+          <img src="https://static.wixstatic.com/media/eff117_f30190b56f7f4c37abcd125a6b6f912d~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,enc_avif,quality_auto/eff117_f30190b56f7f4c37abcd125a6b6f912d~mv2.jpg">
+        </div>
+    </div>
+
+
+    <script>
+      function updateTime() {
+        var currentTime = new Date().toLocaleString();
+        var timeText = document.querySelector("#timeElement");
+        timeText.innerHTML = currentTime
+      }
+      setInterval(updateTime, 1000);
+    </script>
+
+
   </body>
 </html>
