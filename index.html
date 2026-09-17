@@ -3,11 +3,21 @@
   <head>
     <style>
 
+      html {
+        cursor: url('assets/cursor4.png') 5 5, auto;
+      }
+
+      a, button, .clickable {
+        cursor: url('assets/pointer1.png') 5 5, pointer;
+      }
+
       body {
         width: 100%;
         height: 100%;
-        background-image: url("https://images.openai.com/static-rsc-4/TvRw3W_paA49WVq3U0V5w0jUm6oj69I37aMo5mLQV3mpAqg4QP4GIkoK7DiIbV4Cdascqs_p_lFDEhOBOcKBVd9bOksUBQsdcr1mvNeEqwZ0zQfPKFARdLl9UjJ1hN2MaZtWk2W2lzuQbMDAmnwSNguK-POxWFfKMxMTm9Wuw_AuPfeNJoMN5gdYDG96_Rwb?purpose=fullsize");
-        background-size: cover;
+        /*background-image: url("https://images.openai.com/static-rsc-4/TvRw3W_paA49WVq3U0V5w0jUm6oj69I37aMo5mLQV3mpAqg4QP4GIkoK7DiIbV4Cdascqs_p_lFDEhOBOcKBVd9bOksUBQsdcr1mvNeEqwZ0zQfPKFARdLl9UjJ1hN2MaZtWk2W2lzuQbMDAmnwSNguK-POxWFfKMxMTm9Wuw_AuPfeNJoMN5gdYDG96_Rwb?purpose=fullsize");*/
+        background-image: url("assets/mainbg.png");
+        background-size: cover + 0;
+        background-repeat: no-repeat;
         margin: 0;
       }
 
@@ -16,10 +26,13 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: auto;
+        height: fit-content;
         padding-bottom: 2px;
-        background-color: rgb(0, 0, 0, 0.25);
+        background-color: rgba(23, 38, 50, 0.5);
         backdrop-filter: blur(50px);
+        font-weight: lighter;
+        line-height: 0%;
+        
 
         
       }
@@ -32,9 +45,9 @@
         letter-spacing: 0.8px; 
         transform: scaleY(1.3);
         color: rgb(214, 214, 214);
-        font-size: 12px;
+        font-size: 25px;
         font-weight: lighter;
-        line-height: 22px;
+        line-height: 0px;
         background-image: url("https://media.istockphoto.com/id/1391524274/vector/gray-bright-grunge-texture-vector-background.jpg?s=612x612&w=0&k=20&c=dLmXvYOICRWWTEFfgkXuM21I3IddBeOYvGt4-h1Vl1A=");
         background-size: cover;
         background-position: center;
@@ -42,6 +55,17 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
         color: transparent;
+        margin-top: 0;
+        margin-bottom: 0;
+        
+      }
+
+      .topbar_quotes {
+        font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;
+        font-size: 19px;
+        color: rgb(218, 218, 214);   
+      
+
       }
 
 
@@ -53,9 +77,9 @@
         letter-spacing: 0.8px; 
         transform: scaleY(1.3);
         color: rgb(214, 214, 214);
-        font-size: 12px;
+        font-size: 25px;
         font-weight: lighter;
-        line-height: 22px;
+        line-height: 0px;
         background-image: url("https://media.istockphoto.com/id/1391524274/vector/gray-bright-grunge-texture-vector-background.jpg?s=612x612&w=0&k=20&c=dLmXvYOICRWWTEFfgkXuM21I3IddBeOYvGt4-h1Vl1A=");
         background-size: cover;
         background-position: center;
@@ -63,83 +87,263 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
         color: transparent;
+        margin-top: 0;
+        margin-bottom: 0;
       }
 
       .greeting_card {
         font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;
-        color: rgb(19, 19, 19);
-        background-color: rgba(255, 255, 255, 0.20);        
+        font-size: 9px;
+        color: rgb(218, 218, 214);
+        background-color: rgba(23, 38, 50, 0.5);
         backdrop-filter: blur(50px);
-        border : solid 1px;
         width : fit-content;
         padding: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: solid 0.5px  rgba(132, 151, 167, 0.5);
         border-radius: 5px;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%)
+        top: 14%;
+        left: 5%;
+        /*transform: translate(-50%, -50%)*/
       }
 
       .map {
         font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;
-        font-size: large;
-        color: aliceblue;
-        color: rgb(10, 10, 10);
-        background-color: rgba(255, 255, 255, 0.20);        
+        font-size: 12px;
+        color: rgb(218, 218, 214);
+        background-color: rgba(23, 38, 50, 0.5);
         backdrop-filter: blur(50px);
         text-align: center;
-        border: solid 1px;
+        border: solid 1px rgb(113, 131, 144);
         border-radius: 3px;
         position: absolute;
-        top: 14%;
-        left: 83%;
+        top: 100px;
+        left: 76%;
         line-height: 0%;
       }
 
 
       .map img {
-        width: 200px;
-        height: 160px;
+        width: 295px;
+        height: auto;
       }
 
-      
+      .sidebar {
+        width: fit-content;
+        height: 600px;
+        text-align: center;
+        /*border: solid 1px ;*/
+        color: rgb(218, 218, 214);
+        background-color: rgba(23, 38, 50, 0.7);
+        backdrop-filter: blur(50px);
+        position: absolute;
+        top: 14%;
+
+      }
+
+      .fredom_img img  {
+        width: 60px;
+        height: auto;
+      }
+
+      .sidebar_text {
+        /*border: solid 1px rgb(186, 185, 185);*/
+        font-family: "Times New Roman", Times;
+        margin-top: 1px;
+        width: 60px;
+      }
+
+
+      .notes {
+        width:fit-content;
+        height: fit-content;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: solid 1px rgb(135, 151, 163);
+        border-radius: 3px;
+        color: rgb(218, 218, 214);
+        text-align: center;
+        font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;        
+        background-color: rgba(36, 55, 70, 0.8);
+        backdrop-filter: blur(50px);
+        position: absolute;
+        top: 300px;
+        left: 76%;
+        /*transform: translate(-50%, -50%)*/
+
+      }
+
+
+
+      .icon.selected {
+        border: solid 1px;
+        border-color: #cecece;
+        
+      }
+
+      .notes_input {
+        margin: 10px;
+        width: 250px;
+        height: 130px;
+        font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;        
+        background-color: rgba(36, 55, 70, 0.01);
+        backdrop-filter: blur(50px);
+        color: rgb(218, 218, 214);
+ 
+      }
+
+      .song_container {
+
+        width: fit-content;
+        height: fit-content;
+        padding: 10px;
+        border: solid 1px rgb(160, 172, 184);
+        border-radius: 3px;
+        background-color: rgba(36, 55, 70, 0.5);
+        backdrop-filter: blur(50px);
+        position: absolute;
+        top: 550px;
+        left: 74.5%;
+      }
+
+      .song_container audio{
+        width: 250px;
+        height: 50px;
+        
+      }
+
+      .gallery {
+        font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;  
+        height: 250px;
+        overflow-y: auto; 
+        width: 350px;
+        padding: 20px;
+        color: white;
+        border: solid 1px rgb(160, 172, 184);
+        border-radius: 3px;
+        background-color: rgba(36, 55, 70, 0.5);
+        backdrop-filter: blur(50px);
+        position: absolute;
+        top: 410px;
+        left: 5%;
+        text-align: center;
+        
+      }
+
+      .gallery img {
+        width: 165px;
+        height: auto;
+      }
+
+
+
 
     </style>
   </head>
   <body>
     <div class="topbar">
 
-      <div class="logo">
-        <h1>Vinland<br>Saga OS</h1>
-
+      <div class="logo" >
+        <p>Vinland Saga OS</p>
       </div>
-      <div class="time_element">
-        <h1 id="timeElement">Time </h1>
+
+
+      <div class="topbar_quotes" >
+        <p>"A warrior's greatest strength is knowing when not to fight." - Thorfinn</p>
+      </div>
+
+
+      <div class="time_element" >
+        <p id="timeElement">Time </p>
       </div>  
 
     </div>
 
-    <div class="greeting_card">
-      
-        <h1>Good evening, warrior.<br>The sea is calm today.</h1>
-      
+    <div class="sidebar">
+
+      <div class="fredom_img">
+        <img src="c:\Abdul Raffay\HackClub\Vinlandsaga-OS\assets\Fredom.jpg">
+      </div>
+
+      <div class="sidebar_text">
+        <p class="icon" onclick="selectIcon(this)"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-pc-display-horizontal" viewBox="0 0 16 16">
+        <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5M12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0m2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0M1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1M1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25"/>
+        </svg><br>This PC
+        </p>
+      </div>
+
+      <div class="sidebar_text">
+        <p class="icon" onclick="selectIcon(this)"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
+            <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/>
+          </svg><br>Files
+        </p>
+      </div>
+
+      <div class="sidebar_text" id="windowopen">
+        <p class="icon" onclick="selectIcon(this)"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+            <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"/>
+          </svg><br>Notes
+        </p>
+      </div>
+
+      <div class="sidebar_text">
+        <p class="icon" onclick="selectIcon(this)"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-image-fill" viewBox="0 0 16 16">
+            <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+          </svg><br>Gallery
+        </p>
+      </div>
+
     </div>
-        <div class="map">
-          <h3>
+
+    <div class="greeting_card" >
+      
+      <h1>"Every living human being<br>is a slave to something."<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; - Askeladd</h1>
+
+    </div>  
+
+    <div class="gallery">
+      <h2 style="line-height: 0; margin-top: -1px;">Gallery</h2>
+      <img src="https://i.pinimg.com/736x/8b/24/79/8b247944ac16cead7d50524fb153ef7d.jpg" alt="">
+      <img src="https://i.pinimg.com/1200x/8e/f7/16/8ef7161a403f0a2b8ddbec4f82530366.jpg" alt="">
+      <img src="https://i.pinimg.com/1200x/2f/09/8e/2f098ea3439ea00f7676f44b866ca216.jpg" alt="">
+      <img src="https://i.pinimg.com/1200x/0b/f6/fa/0bf6fa8d3c8a19fd1c2502554f45d37f.jpg" alt="">
+      <img src="https://i.pinimg.com/736x/9f/6c/65/9f6c65f8ad67bfbc7481eb9177b9e7df.jpg" alt="">
+      <img src="https://i.pinimg.com/1200x/55/db/37/55db378a158582b0582d19cc6573a627.jpg" alt="">
+      <img src="https://i.pinimg.com/736x/8b/24/79/8b247944ac16cead7d50524fb153ef7d.jpg" alt="">
+      <img src="https://i.pinimg.com/1200x/8e/f7/16/8ef7161a403f0a2b8ddbec4f82530366.jpg" alt="">
+    </div>
+      
+    <div>
+
+      <div class="map">
+        <h3>
             Journey Map
-          </h3>
-          <img src="https://static.wixstatic.com/media/eff117_f30190b56f7f4c37abcd125a6b6f912d~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,enc_avif,quality_auto/eff117_f30190b56f7f4c37abcd125a6b6f912d~mv2.jpg">
-        </div>
-    </div>
+        </h3>
+        <img src="assets/map1.png">
+      </div>
+
+      <div class="notes" id="window">
+        <h2  style="cursor: pointer; margin: 0; padding: 0; padding-top: 10px;" id="window-header">Quick Notes</h2>
+        <textarea class="notes_input" placeholder="type your notes..." style="font-size: medium;" ></textarea>
+        <p style="cursor: pointer; margin: 0; padding: 0; border: solid 1px; margin-left: 100px; margin-right: 100px; margin-bottom: 10px;" id="windowclose">Close</p>
+
+      </div>
+
+      <div class="song_container">
+        <img src="assets/songpfp.jpg" alt="" style="height: 45px; width: auto;">
+        <audio controls>
+          <source src="assets/song.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
 
 
-    <script>
-      function updateTime() {
-        var currentTime = new Date().toLocaleString();
-        var timeText = document.querySelector("#timeElement");
-        timeText.innerHTML = currentTime
-      }
-      setInterval(updateTime, 1000);
+    </div>  
+
+
+    <script src="script.js">
     </script>
 
 
