@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet"> 
+
     <style>
+
 
       html {
         cursor: url('assets/cursor4.png') 5 5, auto;
@@ -104,26 +109,43 @@
         border: solid 0.5px  rgba(132, 151, 167, 0.5);
         border-radius: 5px;
         position: absolute;
-        top: 14%;
+        top: 100px;
         left: 5%;
         /*transform: translate(-50%, -50%)*/
       }
 
       .map {
-        font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;
-        font-size: 12px;
+        font-family: "Yuji Boku", serif;
+        font-weight: 400;
+        font-style: normal;
+        /*font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;*/
+        font-size: 13px;
         color: rgb(218, 218, 214);
         background-color: rgba(23, 38, 50, 0.5);
         backdrop-filter: blur(50px);
-        text-align: center;
         border: solid 1px rgb(113, 131, 144);
         border-radius: 3px;
         position: absolute;
         top: 100px;
         left: 76%;
-        line-height: 0%;
+        line-height:2px;
       }
 
+      .map_header {
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      .map_close:hover {
+        background-color: #f3fcfb;
+        color: rgba(23, 38, 50, 0.5);
+      }
 
       .map img {
         width: 295px;
@@ -139,7 +161,7 @@
         background-color: rgba(23, 38, 50, 0.7);
         backdrop-filter: blur(50px);
         position: absolute;
-        top: 14%;
+        top: 100px;
 
       }
 
@@ -157,22 +179,40 @@
 
 
       .notes {
+        font-family: "Yuji Boku", serif;
+        font-weight: 400;
+        font-style: normal;
         width:fit-content;
         height: fit-content;
         padding-left: 10px;
         padding-right: 10px;
+        padding-bottom: 8px;
         border: solid 1px rgb(135, 151, 163);
         border-radius: 3px;
         color: rgb(218, 218, 214);
-        text-align: center;
-        font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;        
-        background-color: rgba(36, 55, 70, 0.8);
+        /*font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;*/        
+        background-color: rgba(23, 38, 50, 0.7);
         backdrop-filter: blur(50px);
         position: absolute;
-        top: 300px;
+        top: 410px;
         left: 76%;
         /*transform: translate(-50%, -50%)*/
 
+      }
+
+      .notes_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: -7px;
+        padding: 0; 
+      }
+
+      .notes_close:hover {
+        background-color: #f3fcfb;
+        color: rgba(23, 38, 50, 0.5);
       }
 
 
@@ -186,7 +226,7 @@
       .notes_input {
         margin: 10px;
         width: 250px;
-        height: 130px;
+        height: 145px;
         font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;        
         background-color: rgba(36, 55, 70, 0.01);
         backdrop-filter: blur(50px);
@@ -204,8 +244,8 @@
         background-color: rgba(36, 55, 70, 0.5);
         backdrop-filter: blur(50px);
         position: absolute;
-        top: 550px;
-        left: 74.5%;
+        top: 625px;
+        left: 74.3%;
       }
 
       .song_container audio{
@@ -215,27 +255,148 @@
       }
 
       .gallery {
-        font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;  
+        /*font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;  */
+        font-family: "Yuji Boku", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size:larger;
         height: 250px;
         overflow-y: auto; 
         width: 350px;
-        padding: 20px;
+        padding-top: 2px;
+        padding-right: 20px;
+        padding-bottom: 15px;
+        padding-left: 25px;
         color: white;
         border: solid 1px rgb(160, 172, 184);
         border-radius: 3px;
         background-color: rgba(36, 55, 70, 0.5);
         backdrop-filter: blur(50px);
         position: absolute;
-        top: 410px;
+        top: 428px;
         left: 5%;
-        text-align: center;
         
+      }
+
+      .gallery_header {
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+      }
+
+      .gallery_close:hover {
+        background-color: #f3fcfb;
+        color: rgba(23, 38, 50, 0.5);
       }
 
       .gallery img {
         width: 165px;
         height: auto;
+        opacity: 0.7;
       }
+
+
+      .clock_element {
+        width: 274px;
+        height: fit-content;
+        padding: 10px;
+        border: solid 1px rgb(160, 172, 184);
+        border-radius: 3px;
+        background-color: rgba(36, 55, 70, 0.5);
+        backdrop-filter: blur(50px);
+        position: absolute;
+        top: 290px;
+        left: 76%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+      }
+      
+
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
+}
+
 
 
 
@@ -261,6 +422,17 @@
 
     </div>
 
+    
+    <div class="clock_element" id="clock">
+        <div style="width: 175px; cursor: pointer;" id="clock-header">
+        <p id="clockTime" style="color: white; font-size: 30px; line-height: 0;">Time </p>
+        <p id="clockDate" style="color: rgb(191, 226, 253); font-size: 17.5px; line-height: 5px; margin-left: 5px;">Date </p>
+        </div>
+        <img src="assets/symbol.png" alt="" style="width: 90px; height: auto;">
+    </div> 
+    
+
+
     <div class="sidebar">
 
       <div class="fredom_img">
@@ -281,17 +453,25 @@
         </p>
       </div>
 
-      <div class="sidebar_text" id="windowopen">
+      <div class="sidebar_text" id="notesopen">
         <p class="icon" onclick="selectIcon(this)"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
             <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"/>
           </svg><br>Notes
         </p>
       </div>
 
-      <div class="sidebar_text">
+      <div class="sidebar_text" id="galleryopen">
         <p class="icon" onclick="selectIcon(this)"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-image-fill" viewBox="0 0 16 16">
             <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
           </svg><br>Gallery
+        </p>
+      </div>
+
+      <div class="sidebar_text" id="mapopen">
+        <p class="icon" onclick="selectIcon(this)"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+            <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
+            <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+          </svg><br>Map
         </p>
       </div>
 
@@ -303,8 +483,12 @@
 
     </div>  
 
-    <div class="gallery">
-      <h2 style="line-height: 0; margin-top: -1px;">Gallery</h2>
+    <div class="gallery" id="gallery">
+      <div class="gallery_header">
+        <p  style="cursor: pointer; width: 100%; font-weight: 600;  padding: 1px; margin: 0; font-size: 16px;" id="gallery-header">Gallery</p>
+        <p style="cursor: pointer; text-align: center;  padding: 1px; line-height: 13px; width: 20px; height: fit-content; margin: 0; font-size: 16px;" class="gallery_close" id="galleryclose">X</p>
+      </div>
+      <img src="https://i.pinimg.com/736x/d6/08/26/d60826074448892f257e1e160a94e6bf.jpg" alt="">
       <img src="https://i.pinimg.com/736x/8b/24/79/8b247944ac16cead7d50524fb153ef7d.jpg" alt="">
       <img src="https://i.pinimg.com/1200x/8e/f7/16/8ef7161a403f0a2b8ddbec4f82530366.jpg" alt="">
       <img src="https://i.pinimg.com/1200x/2f/09/8e/2f098ea3439ea00f7676f44b866ca216.jpg" alt="">
@@ -317,30 +501,41 @@
       
     <div>
 
-      <div class="map">
-        <h3>
-            Journey Map
-        </h3>
+      <div class="map" id="map">
+        <div class="map_header">
+        <p  style="cursor: pointer; width: 100%; font-weight: 600;  padding: 1px; margin: 0; font-size: 16px;" id="map-header">Journey Map</p>
+        <p style="cursor: pointer; text-align: center;  padding: 1px; line-height: 13px; width: 20px; height: 15px; margin: 0; font-size: 16px;" class="map_close" id="mapclose">X</p>
+        </div>
         <img src="assets/map1.png">
       </div>
 
-      <div class="notes" id="window">
-        <h2  style="cursor: pointer; margin: 0; padding: 0; padding-top: 10px;" id="window-header">Quick Notes</h2>
-        <textarea class="notes_input" placeholder="type your notes..." style="font-size: medium;" ></textarea>
-        <p style="cursor: pointer; margin: 0; padding: 0; border: solid 1px; margin-left: 100px; margin-right: 100px; margin-bottom: 10px;" id="windowclose">Close</p>
 
+
+      <div class="notes" id="notes">
+        <div class="notes_header">
+        <p  style="cursor: pointer; width: 100%; font-weight: 600;  padding: 1px; margin: 0; font-size: 16px;" id="notes-header">Quick Notes</p>
+        <p style="cursor: pointer; text-align: center;  padding: 1px; line-height: 13px; width: 20px; height: 15px; margin: 0; font-size: 16px;" class="notes_close" id="notesclose">X</p>
+        </div>
+
+        <textarea class="notes_input" placeholder="type your notes..." style="font-size: medium;" ></textarea>
+        
       </div>
 
-      <div class="song_container">
-        <img src="assets/songpfp.jpg" alt="" style="height: 45px; width: auto;">
-        <audio controls>
+      <div class="song_container" id="song">
+        <img src="assets/songpfp.jpg" alt="" style="height: 45px; width: auto; cursor: pointer;" id="song-header">
+        <audio controls autoplay id="my-audio">
           <source src="assets/song.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
       </div>
 
 
-    </div>  
+    </div> 
+    
+    <div class="loader-wrapper">
+      <p style="color: white; font-size: 20px; font-family: 'Times New Roman', Times, serif;">Please Press F11 For Better Exprence</p><br>&emsp;
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
 
 
     <script src="script.js">

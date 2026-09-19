@@ -1,4 +1,11 @@
-dragElement(document.getElementById("window"));
+
+
+dragElement(document.getElementById("notes"));
+dragElement(document.getElementById("map"));
+dragElement(document.getElementById("song"));
+dragElement(document.getElementById("gallery"));
+dragElement(document.getElementById("clock"));
+
 
 
 function dragElement(element) {
@@ -59,6 +66,18 @@ function updateTime() {
 setInterval(updateTime, 1000);
 
 
+function updateClocktime() {
+    var clockcurrentTime = new Date().toLocaleTimeString();
+    var clockcurrentDate = new Date().toLocaleDateString();
+
+    var clocktimeText = document.querySelector("#clockTime");
+    var clockdateText = document.querySelector("#clockDate");
+    clocktimeText.innerHTML = clockcurrentTime
+    clockdateText.innerHTML = clockcurrentDate
+    }
+setInterval(updateClocktime, 1000);
+
+
 var selectedIcon = undefined
 
 function selectIcon(element) {
@@ -77,8 +96,7 @@ function deselectIcon(element) {
 }
 
 
-var windowScreen = document.querySelector("#window")
-
+var windowScreen = document.querySelector("#notes")
 
 function closeWindow(element) {
   element.style.display = "none"
@@ -88,10 +106,17 @@ function openWindow(element) {
   element.style.display = "block"
 }
 
-var windowScreenClose = document.querySelector("#windowclose")
 
-var windowScreenOpen = document.querySelector("#windowopen")
+var windowScreenClose = document.querySelector("#notesclose");
+var windowScreenOpen = document.querySelector("#notesopen");
 
+const mapWindow = document.querySelector("#map");
+const mapWindowOpen = document.querySelector("#mapopen");
+const mapWindowClose = document.querySelector("#mapclose");
+
+const galleryWindow = document.querySelector("#gallery");
+const galleryWindowOpen = document.querySelector("#galleryopen");
+const galleryWindowClose = document.querySelector("#galleryclose");
 
 
 
@@ -102,3 +127,30 @@ windowScreenClose.addEventListener("click", function() {
 windowScreenOpen.addEventListener("click", function() {
   openWindow(windowScreen);
 });
+
+mapWindowClose.addEventListener("click", function() {
+  closeWindow(mapWindow);
+});
+
+mapWindowOpen.addEventListener("click", function() {
+  openWindow(mapWindow);
+});
+
+galleryWindowClose.addEventListener("click", function() {
+  closeWindow(galleryWindow);
+});
+
+galleryWindowOpen.addEventListener("click", function() {
+  openWindow(galleryWindow);
+});
+
+
+window.addEventListener("load", function() {
+  const loaderWrapper = document.querySelector(".loader-wrapper");
+  setTimeout (() => {
+    loaderWrapper.style.display = "none";
+  }, 2000);
+  
+});
+
+window.addEventListener('click', () => { document.getElementById('my-audio').play() }, { once: true });
