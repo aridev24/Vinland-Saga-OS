@@ -1,8 +1,8 @@
 
 ## What Vinland Saga OS is
 
-Vinland Saga OS in a Web-Based OS inspired by my favourite anime, Vinland Saga. It's a Japanese animated series.
-It's my first-ever Hack Club Project, And a first ever fully working website. 
+Vinland Saga OS is a Web-Based OS inspired by my favourite anime, Vinland Saga. It's a Japanese animated series.
+It's my first-ever Hack Club project and a first-ever fully working website. 
 I Know there are still many bugs but I tried my best and I will improve it more. 
 To be honest, I learned so many new things with this project, especially JavaScript. 
 I have never written JS myself before, but you made me use it on  my own without AI, 
@@ -11,8 +11,8 @@ yea but i will be honest with you: there was a lil hidden bug in some 2 lines of
 ## Main features
 
 There are not too many features, but I love it.  
-I added a top bar haiving a logo, a Thorfinn quote, and a clock.  
-I also added a side bar having apps icons and some Viking Norse rune symbols for decor. Yea these Viking Norse rune symbols makes my webOS looks attractive and these are heavily related to my webOS concept because Vinland Saga is a historical Viking series.
+I added a top bar having a logo, a Thorfinn quote, and a clock.  
+I also added a sidebar having app icons and some Viking Norse rune symbols for decor. Yea these Viking Norse rune symbols makes my webOS looks attractive and these are heavily related to my webOS concept because Vinland Saga is a historical Viking series.
 
 There are a total of five apps, or you can say Widgets, including: 
 1. A clock app
