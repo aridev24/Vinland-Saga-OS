@@ -2,7 +2,11 @@
 ## What Vinland Saga OS is
 
 Vinland Saga OS in a Web-Based OS inspired by my favourite anime, Vinland Saga. It's a Japanese animated series.
-It's my first-ever Hack Club Project, And a first ever fully working website. I Know there are still many bugs but I tried my best and I will improve it more. To be honest, I learned so many new things with this project, especially JavaScript. I have never written JS myself before, but you made me use it on  my own without AI, yea but i will be honest with you: there was a lil hidden bug in some 2 lines of JS, I tried my best to debug but at the end i asked copilot to tell me why this code is not working and it told me, the lines were swapped with each other, so then I debugged it.
+It's my first-ever Hack Club Project, And a first ever fully working website. 
+I Know there are still many bugs but I tried my best and I will improve it more. 
+To be honest, I learned so many new things with this project, especially JavaScript. 
+I have never written JS myself before, but you made me use it on  my own without AI, 
+yea but i will be honest with you: there was a lil hidden bug in some 2 lines of JS, I tried my best to debug but at the end i asked copilot to tell me why this code is not working and it told me, the lines were swapped with each other, so then I debugged it.
 
 ## Main features
 
