@@ -1,56 +1,556 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet"> 
+
     <style>
+
+
+      html {
+        cursor: url('assets/cursor4.png') 5 5, auto;
+      }
+
+      a, button, .clickable {
+        cursor: url('assets/pointer1.png') 5 5, pointer;
+      }
 
       body {
         width: 100%;
         height: 100%;
-        background-image: url("https://images.openai.com/static-rsc-4/TvRw3W_paA49WVq3U0V5w0jUm6oj69I37aMo5mLQV3mpAqg4QP4GIkoK7DiIbV4Cdascqs_p_lFDEhOBOcKBVd9bOksUBQsdcr1mvNeEqwZ0zQfPKFARdLl9UjJ1hN2MaZtWk2W2lzuQbMDAmnwSNguK-POxWFfKMxMTm9Wuw_AuPfeNJoMN5gdYDG96_Rwb?purpose=fullsize");
-        background-size: cover;
+        /*background-image: url("https://images.openai.com/static-rsc-4/TvRw3W_paA49WVq3U0V5w0jUm6oj69I37aMo5mLQV3mpAqg4QP4GIkoK7DiIbV4Cdascqs_p_lFDEhOBOcKBVd9bOksUBQsdcr1mvNeEqwZ0zQfPKFARdLl9UjJ1hN2MaZtWk2W2lzuQbMDAmnwSNguK-POxWFfKMxMTm9Wuw_AuPfeNJoMN5gdYDG96_Rwb?purpose=fullsize");*/
+        background-image: url("assets/mainbg.png");
+        background-size: cover + 0;
+        background-repeat: no-repeat;
         margin: 0;
       }
 
       .topbar {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
-        height: flex;
+        height: fit-content;
         padding-bottom: 2px;
-        background-color: rgb(0, 0, 0, 0.25);
+        background-color: rgba(23, 38, 50, 0.5);
         backdrop-filter: blur(50px);
+        font-weight: lighter;
+        line-height: 0%;
+        
 
         
       }
 
       .logo {
         margin-left: 20px;
-        color: white;
+        width: fit-content;
         font-family: Impact, sans-serif; 
         text-transform: uppercase; 
-        letter-spacing: 0.5px; 
+        letter-spacing: 0.8px; 
         transform: scaleY(1.3);
         color: rgb(214, 214, 214);
-        font-size: 12px;
+        font-size: 25px;
         font-weight: lighter;
-        line-height: 22px;
-        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.671);
+        line-height: 0px;
+        background-image: url("https://media.istockphoto.com/id/1391524274/vector/gray-bright-grunge-texture-vector-background.jpg?s=612x612&w=0&k=20&c=dLmXvYOICRWWTEFfgkXuM21I3IddBeOYvGt4-h1Vl1A=");
+        background-size: cover;
+        background-position: center;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        margin-top: 0;
+        margin-bottom: 0;
+        
+      }
 
+      .topbar_quotes {
+        font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;
+        font-size: 19px;
+        color: rgb(218, 218, 214);   
+      
 
       }
+
+
+      .time_element {     
+        margin-right: 20px;  
+        width: fit-content;
+        font-family: Impact, sans-serif; 
+        text-transform: uppercase; 
+        letter-spacing: 0.8px; 
+        transform: scaleY(1.3);
+        color: rgb(214, 214, 214);
+        font-size: 25px;
+        font-weight: lighter;
+        line-height: 0px;
+        background-image: url("https://media.istockphoto.com/id/1391524274/vector/gray-bright-grunge-texture-vector-background.jpg?s=612x612&w=0&k=20&c=dLmXvYOICRWWTEFfgkXuM21I3IddBeOYvGt4-h1Vl1A=");
+        background-size: cover;
+        background-position: center;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .greeting_card {
+        font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;
+        font-size: 9px;
+        color: rgb(218, 218, 214);
+        background-color: rgba(23, 38, 50, 0.5);
+        backdrop-filter: blur(50px);
+        width : fit-content;
+        padding: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: solid 0.5px  rgba(132, 151, 167, 0.5);
+        border-radius: 5px;
+        position: absolute;
+        top: 100px;
+        left: 5%;
+        /*transform: translate(-50%, -50%)*/
+      }
+
+      .map {
+        font-family: "Yuji Boku", serif;
+        font-weight: 400;
+        font-style: normal;
+        /*font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;*/
+        font-size: 13px;
+        color: rgb(218, 218, 214);
+        background-color: rgba(23, 38, 50, 0.5);
+        backdrop-filter: blur(50px);
+        border: solid 1px rgb(113, 131, 144);
+        border-radius: 3px;
+        position: absolute;
+        top: 100px;
+        left: 76%;
+        line-height:2px;
+      }
+
+      .map_header {
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      .map_close:hover {
+        background-color: #f3fcfb;
+        color: rgba(23, 38, 50, 0.5);
+      }
+
+      .map img {
+        width: 295px;
+        height: auto;
+      }
+
+      .sidebar {
+        width: fit-content;
+        height: 600px;
+        text-align: center;
+        /*border: solid 1px ;*/
+        color: rgb(218, 218, 214);
+        background-color: rgba(23, 38, 50, 0.7);
+        backdrop-filter: blur(50px);
+        position: absolute;
+        top: 100px;
+
+      }
+
+      .fredom_img img  {
+        width: 50px;
+        height: auto;
+      }
+
+      .sidebar_text {
+        /*border: solid 1px rgb(186, 185, 185);*/
+        font-family: "Times New Roman", Times;
+        margin-top: 1px;
+        width: 60px;
+      }
+
+
+      .notes {
+        font-family: "Yuji Boku", serif;
+        font-weight: 400;
+        font-style: normal;
+        width:fit-content;
+        height: fit-content;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 8px;
+        border: solid 1px rgb(135, 151, 163);
+        border-radius: 3px;
+        color: rgb(218, 218, 214);
+        /*font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;*/        
+        /*background-color: rgba(23, 38, 50, 0.7); */
+        background-color: rgba(36, 55, 70, 0.7);
+        backdrop-filter: blur(50px);
+        position: absolute;
+        top: 410px;
+        left: 76%;
+        /*transform: translate(-50%, -50%)*/
+
+      }
+
+      .notes_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: -7px;
+        padding: 0; 
+      }
+
+      .notes_close:hover {
+        background-color: #f3fcfb;
+        color: rgba(23, 38, 50, 0.5);
+      }
+
+
+
+      .icon.selected {
+        border: solid 1px;
+        border-color: #cecece;
+        
+      }
+
+      .notes_input {
+        margin: 10px;
+        width: 250px;
+        height: 145px;
+        font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;        
+        background-color: rgba(36, 55, 70, 0.01);
+        backdrop-filter: blur(50px);
+        color: rgb(218, 218, 214);
+ 
+      }
+
+      .song_container {
+
+        width: fit-content;
+        height: fit-content;
+        padding: 10px;
+        border: solid 1px rgb(160, 172, 184);
+        border-radius: 3px;
+        background-color: rgba(36, 55, 70, 0.4);
+        backdrop-filter: blur(50px);
+        position: absolute;
+        top: 625px;
+        left: 74.3%;
+      }
+
+      .song_container audio{
+        width: 250px;
+        height: 50px;
+        
+      }
+
+      .gallery {
+        /*font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;  */
+        font-family: "Yuji Boku", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size:larger;
+        height: 250px;
+        overflow-y: auto; 
+        width: 350px;
+        padding-top: 2px;
+        padding-right: 20px;
+        padding-bottom: 15px;
+        padding-left: 25px;
+        color: white;
+        border: solid 1px rgb(160, 172, 184);
+        border-radius: 3px;
+        background-color: rgba(36, 55, 70, 0.5);
+        backdrop-filter: blur(50px);
+        position: absolute;
+        top: 428px;
+        left: 5%;
+        
+      }
+
+      .gallery_header {
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+      }
+
+      .gallery_close:hover {
+        background-color: #f3fcfb;
+        color: rgba(23, 38, 50, 0.5);
+      }
+
+      .gallery img {
+        width: 165px;
+        height: auto;
+        opacity: 0.7;
+      }
+
+
+      .clock_element {
+        width: 274px;
+        height: fit-content;
+        padding: 10px;
+        border: solid 1px rgb(160, 172, 184);
+        border-radius: 3px;
+        background-color: rgba(36, 55, 70, 0.5);
+        backdrop-filter: blur(50px);
+        position: absolute;
+        top: 290px;
+        left: 76%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+      }
+      
+
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
+}
+
+
+
+
 
     </style>
   </head>
   <body>
     <div class="topbar">
 
-      <div class="logo">
-        <h1>Vinland<br>Saga OS</h1>
-
+      <div class="logo" >
+        <p>Vinland Saga OS</p>
       </div>
-      <div id="">
 
+
+      <div class="topbar_quotes" >
+        <p>"A warrior's greatest strength is knowing when not to fight." - Thorfinn</p>
+      </div>
+
+
+      <div class="time_element" >
+        <p id="timeElement">Time </p>
+      </div>  
+
+    </div>
+
+    
+    <div class="clock_element" id="clock">
+        <div style="width: 175px; cursor: pointer;" id="clock-header">
+        <p id="clockTime" style="color: white; font-size: 30px; line-height: 0;">Time </p>
+        <p id="clockDate" style="color: rgb(191, 226, 253); font-size: 17.5px; line-height: 5px; margin-left: 5px;">Date </p>
+        </div>
+        <img src="assets/symbol.png" alt="" style="width: 90px; height: auto;">
+    </div> 
+    
+
+
+    <div class="sidebar">
+
+      <div class="fredom_img">
+        <img src="assets/viking-1.png">
+      </div>
+
+      <div class="sidebar_text">
+        <p class="icon" onclick="selectIcon(this)"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-file-earmark-music-fill" viewBox="0 0 16 16">
+            <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M11 6.64v1.75l-2 .5v3.61c0 .495-.301.883-.662 1.123C7.974 13.866 7.499 14 7 14s-.974-.134-1.338-.377C5.302 13.383 5 12.995 5 12.5s.301-.883.662-1.123C6.026 11.134 6.501 11 7 11c.356 0 .7.068 1 .196V6.89a1 1 0 0 1 .757-.97l1-.25A1 1 0 0 1 11 6.64"/>
+          </svg><br>Music
+        </p>
+      </div>
+
+      <div class="sidebar_text">
+        <p class="icon" onclick="selectIcon(this)"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-alarm-fill" viewBox="0 0 16 16">
+            <path d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5m2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.04 8.04 0 0 0 .86 5.387M11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.04 8.04 0 0 0-3.527-3.527"/>
+          </svg><br>Clock
+        </p>
+      </div>
+
+      <div class="sidebar_text" id="notesopen">
+        <p class="icon" onclick="selectIcon(this)"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+            <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"/>
+          </svg><br>Notes
+        </p>
+      </div>
+
+      <div class="sidebar_text" id="galleryopen">
+        <p class="icon" onclick="selectIcon(this)"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-image-fill" viewBox="0 0 16 16">
+            <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+          </svg><br>Gallery
+        </p>
+      </div>
+
+      <div class="sidebar_text" id="mapopen">
+        <p class="icon" onclick="selectIcon(this)"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+            <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
+            <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+          </svg><br>Map
+        </p>
+      </div>
+
+      <div>
+        <img src="assets/worrior-1.png" alt="" style="width: 60px; height: auto;">
       </div>
 
     </div>
+
+    <div class="greeting_card" >
+      
+      <h1>"Every living human being<br>is a slave to something."<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; - Askeladd</h1>
+
+    </div>  
+
+    <div class="gallery" id="gallery">
+      <div class="gallery_header">
+        <p  style="cursor: pointer; width: 100%; font-weight: 600;  padding: 1px; margin: 0; font-size: 16px;" id="gallery-header">Gallery</p>
+        <p style="cursor: pointer; text-align: center;  padding: 1px; line-height: 13px; width: 20px; height: fit-content; margin: 0; font-size: 16px;" class="gallery_close" id="galleryclose">X</p>
+      </div>
+      <img src="https://i.pinimg.com/736x/d6/08/26/d60826074448892f257e1e160a94e6bf.jpg" alt="">
+      <img src="https://i.pinimg.com/1200x/a5/bc/a4/a5bca4c35e696a73b0818b312d35c2eb.jpg" alt="">
+      <img src="https://i.pinimg.com/1200x/8e/f7/16/8ef7161a403f0a2b8ddbec4f82530366.jpg" alt="">
+      <img src="https://i.pinimg.com/1200x/2f/09/8e/2f098ea3439ea00f7676f44b866ca216.jpg" alt="">
+      <img src="https://i.pinimg.com/1200x/0b/f6/fa/0bf6fa8d3c8a19fd1c2502554f45d37f.jpg" alt="">
+      <img src="https://i.pinimg.com/736x/9f/6c/65/9f6c65f8ad67bfbc7481eb9177b9e7df.jpg" alt="">
+      <img src="https://i.pinimg.com/1200x/55/db/37/55db378a158582b0582d19cc6573a627.jpg" alt="">
+      <img src="https://i.pinimg.com/736x/8b/24/79/8b247944ac16cead7d50524fb153ef7d.jpg" alt="">
+      <img src="https://i.pinimg.com/236x/6b/1f/d3/6b1fd39a25bca1a9177936fb2d5cf73d.jpg" alt="">
+      <img src="https://i.pinimg.com/1200x/33/84/e2/3384e214c5a26fcb6763bc9423f34adc.jpg" alt="">
+      <img src="https://i.pinimg.com/1200x/b4/3d/f3/b43df390fdb0ab690ff70c45bf041a98.jpg" alt="">
+    </div>
+      
+    <div>
+
+      <div class="map" id="map">
+        <div class="map_header">
+        <p  style="cursor: pointer; width: 100%; font-weight: 600;  padding: 1px; margin: 0; font-size: 16px;" id="map-header">Journey Map</p>
+        <p style="cursor: pointer; text-align: center;  padding: 1px; line-height: 13px; width: 20px; height: 15px; margin: 0; font-size: 16px;" class="map_close" id="mapclose">X</p>
+        </div>
+        <img src="assets/map1.png">
+      </div>
+
+
+
+      <div class="notes" id="notes">
+        <div class="notes_header">
+        <p  style="cursor: pointer; width: 100%; font-weight: 600;  padding: 1px; margin: 0; font-size: 16px;" id="notes-header">Quick Notes</p>
+        <p style="cursor: pointer; text-align: center;  padding: 1px; line-height: 13px; width: 20px; height: 15px; margin: 0; font-size: 16px;" class="notes_close" id="notesclose">X</p>
+        </div>
+
+        <textarea class="notes_input" placeholder="type your notes..." style="font-size: medium;" ></textarea>
+        
+      </div>
+
+      <div class="song_container" id="song">
+        <img src="assets/songpfp.jpg" alt="" style="height: 45px; width: auto; cursor: pointer;" id="song-header">
+        <audio controls autoplay id="my-audio">
+          <source src="assets/song.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+    </div> 
+
+    <div style="width: fit-content; height: fit-content; position: absolute; left: 50%; top: 680px; transform: translate(-50%, 0%);">
+      <img src="assets/tatto-2.png" alt="" style="width: 800px; height: auto;">
+    </div>
+
+    <div class="loader-wrapper">
+      <p style="color: white; font-size: 20px; font-family: 'Times New Roman', Times, serif;">Please Press F11 For Better Exprence</p><br>&emsp;
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+
+    <script src="script.js">
+    </script>
+
+
   </body>
 </html>
