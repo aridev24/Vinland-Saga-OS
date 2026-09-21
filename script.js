@@ -96,7 +96,6 @@ function deselectIcon(element) {
 }
 
 
-var windowScreen = document.querySelector("#notes")
 
 function closeWindow(element) {
   element.style.display = "none"
@@ -106,7 +105,7 @@ function openWindow(element) {
   element.style.display = "block"
 }
 
-
+var windowScreen = document.querySelector("#notes")
 var windowScreenClose = document.querySelector("#notesclose");
 var windowScreenOpen = document.querySelector("#notesopen");
 
@@ -154,3 +153,67 @@ window.addEventListener("load", function() {
 });
 
 window.addEventListener('click', () => { document.getElementById('my-audio').play() }, { once: true });
+
+
+/*---------------------------------------------*/
+
+
+const imgViewer = document.getElementById("imgViewer");
+const largeImg = document.getElementById("largeImg");
+
+document.querySelectorAll("#gallery img").forEach((image) => {
+  image.addEventListener("click", function() {
+    largeImg.src = this.src;
+    imgViewer.style.display= "flex";
+  });
+});
+
+imgViewer.addEventListener("click", function(event) {
+  if (event.target === imgViewer) {
+    imgViewer.style.display = "none";
+  }
+});
+
+
+/*---------------------------------------------*/
+
+const notesArea = document.getElementById("notes-input");
+if(notesArea) {
+  notesArea.value = localStorage.getItem("saved-notes") || "" ;
+
+  notesArea.addEventListener("input", () => { 
+    localStorage.setItem("saved-notes", notesArea.value); 
+  });
+}
+
+/*---------------------------------------------*/
+
+
+/* const choices = [
+  '"A true warrior doesn\'t <br> need a sword." - Thors',
+  '"You don\'t have enemies. <br> Nobody in this entire world <br> deserves to get hurt." - Thors',
+  '"Every living human being is <br> a slave to something." - Askeladd',
+  '"I use a sword because <br> I am weak." - Thors',
+  '"If you are empty, <br> anything can fit into <br> your soul." - Snake',
+  '"Only those who fight on <br> the battlefield get to decide <br> their own rules." - Canute',
+  '"The world is far more <br> beautiful than anything <br> made by man." - Willibald',
+  '"I want to be stronger. <br> I want to be a  better <br> person." - Thorfinn',
+  '"You can\'t build a peaceful <br> land using nothing <br> but blood." - Thorfinn',
+  '"A man who cannot live <br> with his own sins is <br> no man at all." - Askeladd'
+]; */
+
+const choices = [
+  '"A true warrior doesn\'t need a sword." - Thors',
+  '"You don\'t have enemies. Nobody in this entire world deserves to get hurt." - Thors',
+  '"Every living human being is a slave to something." - Askeladd',
+  '"I use a sword because I am weak." - Thors',
+  '"If you are empty, anything can fit into your soul." - Snake',
+  '"Only those who fight on the battlefield get to decide their own rules." - Canute',
+  '"The world is far more beautiful than anything made by man." - Willibald',
+  '"I want to be stronger. I want to be a better person." - Thorfinn',
+  '"You can\'t build a peaceful land using nothing but blood." - Thorfinn',
+  '"A man who cannot live with his own sins is no man at all." - Askeladd'
+];
+
+document.getElementById("greeting-card").innerHTML =
+  choices[Math.floor(Math.random() * choices.length)];

@@ -256,6 +256,7 @@
       }
 
       .gallery {
+        display: none;
         /*font-family: Garamond, "Baskerville Old Face", "Times New Roman", serif;  */
         font-family: "Yuji Boku", serif;
         font-weight: 400;
@@ -299,6 +300,23 @@
         width: 165px;
         height: auto;
         opacity: 0.7;
+        cursor: pointer;
+        
+      }
+
+      #imgViewer {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #imgViewer img {
+        max-width: 80%;
+        max-height: 80%;
       }
 
 
@@ -484,7 +502,7 @@
 
     <div class="greeting_card" >
       
-      <h1>"Every living human being<br>is a slave to something."<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; - Askeladd</h1>
+      <h1 id="greeting-card"></h1>
 
     </div>  
 
@@ -524,7 +542,7 @@
         <p style="cursor: pointer; text-align: center;  padding: 1px; line-height: 13px; width: 20px; height: 15px; margin: 0; font-size: 16px;" class="notes_close" id="notesclose">X</p>
         </div>
 
-        <textarea class="notes_input" placeholder="type your notes..." style="font-size: medium;" ></textarea>
+        <textarea class="notes_input" id="notes-input" placeholder="type your notes..." style="font-size: medium;" ></textarea>
         
       </div>
 
@@ -542,9 +560,15 @@
       <img src="assets/tatto-2.png" alt="" style="width: 800px; height: auto;">
     </div>
 
+
     <div class="loader-wrapper">
       <p style="color: white; font-size: 20px; font-family: 'Times New Roman', Times, serif;">Please Press F11 For Better Exprence</p><br>&emsp;
       <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+
+    <div id="imgViewer">
+      <img id="largeImg" src="" alt="">
     </div>
 
 
