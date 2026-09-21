@@ -31,8 +31,8 @@ I just used some HTML, CSS, and JavaScript to make this project.
 To run or test my WebOS, you can simply check out [Demo URL](https://vinland-saga-os.vercel.app/)  But if you want to run it locally on your pc you need to go to clone my [GitHub Repository](https://github.com/aridev24/Vinland-Saga-OS).
 ### 1. Clone the repository
 ```bash
-git clone https://github.com
-cd REPOSITORY-NAME
+git clone https://github.com/aridev24/Vinland-Saga-OS.git
+cd Vinland-Saga-OS
 ```
 
 ### 2. Run the project
